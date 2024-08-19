@@ -9,7 +9,13 @@ jobs:
  
     steps:
       - uses: actions/checkout@v3
- 
+
+     # Use the Node.js 20 runtime explicitly
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
       #used to cache dependencies with a timeout
       - name: Get Date
         id: get-date
